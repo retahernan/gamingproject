@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+/* Definición de grilla index*/
+.index_contenedor{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "slider slider slider slider"
+    "titulo titulo titulo titulo"
+    "imgNoticia article imgNoticia2 article2" 
+    "footer footer footer footer"
+    ;
+}
+header, .slider, .imgNoticia, .imgNoticia2, .noticia, .noticia2, footer{
+    width: 100%;
+}
+
+.consola_contenedor{
+    display: grid;
+     grid-template-areas: 
+    "header header "
+     "tituloConsola tituloConsola "
+    "consola1 articuloConsola1 "
+    "consola2 articuloConsola2 "
+    "tituloJuegos tituloJuegos " 
+    "juegos juegos"
+    "tituloAccesorios  tituloAccesorios"
+    "accesorios accesorios"
+    "footer footer "
+    ;
+}
+.tituloConsola, .consola1, .articuloConsola1, .consola2, .articuloConsola2, .tituloJuegos, .juegos, .tituloAccesorios{
+    width: 100%;
+}
+.contacto_contenedor{
+    display: grid;
+    grid-template-areas: 
+    "header header "
+    "h1 h1"
+    "formulario nosotros"
+    "footer footer"
+    ;
+}
+
+/* Header */
+header{
+    grid-area: header;
+    display: flex;
+    background-size: contain;
+    align-items: flex-end;
+}
+.header{
+    background-image: url(../Assets/images/bannerIndex.jpg);
+}
+.playHeader{
+    background-image: url(../Assets/images/bannerPlay.jfif);
+}
+.xboxHeader{
+    background-image: url(../Assets/images/bannerXbox.jpg);
+}
+.nintendoHeader{
+    background-image: url(../Assets/images/bannerNintendo.jpg);
+}   
+.logo{
+    width: 30%;
+}
+.logo img{
+    width: 100%;
+}
+nav{
+    width: 70%;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+header nav li {
+    list-style: none;
+    width: 25%;
+    text-align: center;
+    background: linear-gradient(to right, darkblue, lightblue);
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+}
+.playHeader li{
+    background: linear-gradient(to right, rgb(34, 34, 39), rgb(117, 125, 128));
+}
+.xboxHeader li{
+    background: linear-gradient(to right, rgb(22, 77, 39), rgb(54, 153, 79));
+}
+.nintendoHeader li{
+    background: linear-gradient(to right, rgb(211, 20, 20), rgb(248, 66, 66));
+}
+
+/* Cuerpo index */
+section.slider{
+    grid-area: slider;
+    font-size: 1.6rem;
+}
+section.imgNoticia{
+    grid-area: imgNoticia;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article.noticia{
+    font-size: 1.6rem;
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.imgNoticia2{
+    grid-area: imgNoticia2;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article.noticia2{
+    font-size: 1.6rem;
+    grid-area: article2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cuerpo consolas */
+/* section consolas */
+section.consola1{
+    grid-area: consola1;
+}
+article.articuloConsola1{
+    grid-area: articuloConsola1;
+}
+section.consola2{
+    grid-area: consola2;
+}
+article.articuloConsola2{
+    grid-area: articuloConsola2;
+}
+
+.txtVideo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* section juegos */
+.juegos{
+    grid-area: juegos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+.juegos div{
+    width: 18%;
+    margin: 1%;
+}
+.imgjuegos{
+    width: 100%;
+    border-radius: 10px;
+}
+.imgjuegos:hover{
+    border: solid;
+    border-color: rgba(28, 28, 155, 0.884);
+    transform: scale(1.1,1.1);
+}
+
+/* sectioin accesorios*/
+section.accesorios{
+    grid-area: accesorios;
+}
+
+/* Cuerpo formulario*/
+.cliente{
+    grid-area: formulario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.nosotros{
+    grid-area: nosotros;
+}
+
+/* Títulos */
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem; 
+    margin: 30px;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; 
+    margin: 30px;
+}
+h2.tituloNoticias{
+    grid-area: titulo;
+    font-size: 3rem; 
+    margin: 30px;
+}
+h2.tituloConsola{
+    grid-area: tituloConsola;
+    font-size: 3rem; 
+    margin: 30px;
+}
+h2.tituloJuegos{
+    grid-area: tituloJuegos;
+    font-size: 3rem; 
+    margin: 30px;
+}
+h2.tituloAccesorios{
+    grid-area: tituloAccesorios;
+    font-size: 3rem; 
+    margin: 30px;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Footer */
+footer{
+    grid-area: footer;
+    width: 100%;
+    background-image: url(../Assets/images/footer.jpg);
+    display: flex;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    justify-content: space-around;
+}
+footer p{
+    font-size: 2rem;
+}
+footer li{
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+
+/*  Medias */
+
+@media only screen and (max-width:480px){
+    .index_contenedor{
+        grid-template-areas: 
+        "header"
+        "slider"
+        "titulo"
+        "imgNoticia"
+        "article"
+        "imgNoticia2"
+        "article2"
+        "footer"
+        ;
+    }
+    .consola_contenedor{
+        grid-template-areas: 
+        "header "
+        "tituloConsola "
+        "consola1 "
+        "articuloConsola1 "
+        "consola2 "
+        "articuloConsola2 "
+        "tituloJuegos  " 
+        "juegos"
+        "tituloAccesorios"
+        "accesorios"
+        "footer "
+        ;
+    }
+
+    .contacto_contenedor{
+        display: grid;
+        grid-template-areas: 
+        "header "
+        "h1 "
+        "formulario "
+        "nosotros"
+        "footer "
+        ;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width: 720px) {
+    .index_contenedor{
+        grid-template-areas: 
+        "header header"
+        "slider slider"
+        "titulo titulo"
+        "imgNoticia article" 
+        "imgNoticia2 article2" 
+        "footer footer"
+        ;
+    }
+}
+
